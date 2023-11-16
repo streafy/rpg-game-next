@@ -1,0 +1,13 @@
+.button {
+  width: 15vw;
+  height: 3vw;
+  background-color: brown;
+  color: gold;
+  border: 2px solid gray;
+}
+
+.input {
+  height: 3vw;
+  width: 15vw;
+  background-color: aquamarine; 
+}

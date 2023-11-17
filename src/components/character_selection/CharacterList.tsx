@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Character } from './Character';
 import { Input } from '../shared/Input';
+import { Button } from '../shared/Button/Button';
 
 const initialCharacters = [
   { id: 1, name: 'Character1', level: 1 },
@@ -53,6 +54,7 @@ export const CharacterList = () => {
         onTextChange={handleNameChange}
         onButtonClick={handleCharacterCreation}
       />
+      <Button content={'Enter Game'} />
     </div>
   );
 };

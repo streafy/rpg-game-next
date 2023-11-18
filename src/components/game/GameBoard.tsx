@@ -5,6 +5,7 @@ import Creature from './Creature';
 import { Inventory } from './inventory/Inventory';
 import Image from 'next/image';
 import { Button } from '../shared/Button/Button';
+import { CombatLog } from './CombatLog/CombatLog';
 
 export const GameBoard = () => {
   const [isInventoryOpen, setIsInventoryOpen] = useState(false);
@@ -22,6 +23,7 @@ export const GameBoard = () => {
       <button onClick={() => setIsInventoryOpen(!isInventoryOpen)}>
         <Image src='/Backpack.png' alt='Inventory' width='64' height='64' />
       </button>
+      <CombatLog />
       <Inventory isOpen={isInventoryOpen} />
     </div>
   );

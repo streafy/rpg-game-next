@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Creature from './Creature';
 import { Inventory } from './inventory/Inventory';
 import Image from 'next/image';
+import { Button } from '../shared/Button/Button';
 
 export const GameBoard = () => {
   const [isInventoryOpen, setIsInventoryOpen] = useState(false);
@@ -11,11 +12,15 @@ export const GameBoard = () => {
   return (
     <div>
       <div>
-        <Creature name="player" health={100} />
-        <Creature name="enemy" health={100} />
+        <Creature name='player' health={100} />
+        <Creature name='enemy' health={100} />
+      </div>
+      <div className='controls'>
+        <Button content='Attack' />
+        <Button content='Defend' />
       </div>
       <button onClick={() => setIsInventoryOpen(!isInventoryOpen)}>
-        <Image src="/Backpack.png" alt="Inventory" width="64" height="64" />
+        <Image src='/Backpack.png' alt='Inventory' width='64' height='64' />
       </button>
       <Inventory isOpen={isInventoryOpen} />
     </div>
